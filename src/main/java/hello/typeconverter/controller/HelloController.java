@@ -70,7 +70,7 @@ public class HelloController {
         *      예를 들어서 문자로 "true" 가 오면 Boolean 타입으로 받고 싶으면 String -> Boolean 타입으로 변환되도록
         *      컨버터 인터페이스를 만들어서 등록하고, 반대로 적용하고 싶으면 Boolean -> String 타입으로 변환되도록 컨버터를 추가로 만들어서 등록하면 된다.
         *
-        * 
+        *
         * */
     }
 

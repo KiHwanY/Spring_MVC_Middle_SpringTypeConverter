@@ -6,6 +6,7 @@ import org.springframework.core.convert.converter.Converter;
 
 @Slf4j
 public class StringToIpPortConverter implements Converter<String, IpPort> {
+    // 127.0.0.1:8080 같은 문자를 입력하면 IpPort 객체를 만들어 반환한다.
 
     @Override
     public IpPort convert(String source) {
