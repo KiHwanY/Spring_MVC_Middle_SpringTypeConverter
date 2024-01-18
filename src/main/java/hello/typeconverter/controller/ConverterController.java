@@ -16,6 +16,7 @@ public class ConverterController {
         model.addAttribute("number", 10000);
         model.addAttribute("ipPort", new IpPort("127.0.0.1", 8080));
         return "converter-view";
+        // Model에 숫자 10000와 ipPort 객체를 담아서 뷰 템플릿에 전달한다.
     }
 
     @GetMapping("/converter/edit")
@@ -24,6 +25,9 @@ public class ConverterController {
         Form form = new Form(ipPort);
         model.addAttribute("form", form);
         return "converter-form";
+        // th:field가 자동으로 컨버젼 서비스를 적용해주어서 ${{ipPort}} 처럼 적용이 되었다.
+        // 따라서 IpPort -> String으로 변환된다.
+
     }
 
     @PostMapping("/converter/edit")
@@ -31,6 +35,8 @@ public class ConverterController {
         IpPort ipPort = form.getIpPort();
         model.addAttribute("ipPort", ipPort);
         return "converter-view";
+//        @ModelAttribute 를 사용해서 String -> IpPort로 변환된다.
+
     }
 
     @Data
