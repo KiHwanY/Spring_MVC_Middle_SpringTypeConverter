@@ -17,6 +17,8 @@ class MyNumberFormatterTest {
     void parse() throws ParseException {
         Number result = formatter.parse("1,000", Locale.KOREA);
         assertThat(result).isEqualTo(1000L); //Long 타입 주의
+
+//        parse()의 결과가 Long이기 때문에 inEqualTo(1000L)을 통해 비교할 때 마지막에 L을 넣어주어야 한다.
     }
 
     @Test
